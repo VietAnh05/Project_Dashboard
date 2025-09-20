@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Q1–Q12</title>
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Doanh số bán hàng theo Mặt hàng</h2>
+  <div id="Q1" class="chart"></div>
+
+  <h2>Doanh số bán hàng theo Nhóm hàng</h2>
+  <div id="Q2" class="chart"></div>
+
+  <h2>Doanh số bán hàng theo Tháng</h2>
+  <div id="Q3" class="chart"></div>
+
+  <h2>Doanh số bán hàng trung bình theo Ngày trong tuần</h2>
+  <div id="Q4" class="chart"></div>
+
+  <h2>Doanh số bán hàng trung bình theo Ngày trong tháng</h2>
+  <div id="Q5" class="chart"></div>
+
+  <h2>Doanh số bán hàng trung bình theo Khung giờ</h2>
+  <div id="Q6" class="chart"></div>
+
+  <h2>Xác suất bán hàng theo Nhóm hàng</h2>
+  <div id="Q7" class="chart"></div>
+
+  <h2>Xác suất bán hàng của Nhóm hàng theo Tháng</h2>
+  <div id="Q8" class="chart"></div>
+
+  <h2>Xác suất bán hàng của Mặt hàng theo Nhóm hàng</h2>
+  <div id="Q9" class="chart"></div>
+
+  <h2>Xác suất bán hàng của Mặt hàng theo Nhóm hàng trong từng Tháng</h2>
+  <div id="Q10" class="chart"></div>
+
+  <h2>Phân phối Lượt mua hàng</h2>
+  <div id="Q11" class="chart"></div>
+
+  <h2>Phân phối mức chi trả của Khách hàng</h2>
+  <div id="Q12" class="chart"></div>
+
+  <!-- Load dữ liệu chung -->
+  <script>
+    d3.csv("data_ggsheet.csv").then(function(data) {
+      window.data = data; // để các file Q1.js...Q12.js dùng chung
+    });
+  </script>
+
+  <!-- Gọi từng file JS -->
+  <script src="Q1.js"></script>
+  <script src="Q2.js"></script>
+  <script src="Q3.js"></script>
+  <script src="Q4.js"></script>
+  <script src="Q5.js"></script>
+  <script src="Q6.js"></script>
+  <script src="Q7.js"></script>
+  <script src="Q8.js"></script>
+  <script src="Q9.js"></script>
+  <script src="Q10.js"></script>
+  <script src="Q11.js"></script>
+  <script src="Q12.js"></script>
+</body>
+</html>
